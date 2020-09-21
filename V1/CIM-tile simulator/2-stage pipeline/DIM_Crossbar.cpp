@@ -63,8 +63,10 @@ void DIM_Crossbar::execution()
 			{				
 				if (p_WDS->data[column] == 1)
 				{
-					if ((rand() % 10000) > write_fault_probability)
-						*(intMem + row * Number_of_Rows + Number_of_Cols-1-column) = p_WD->data[column];
+					if ((rand() % 10000) >= write_fault_probability)
+					{
+						*(intMem + row * Number_of_Rows + Number_of_Cols - 1 - column) = p_WD->data[column];
+					}
 					else
 					{
 						*(intMem + row * Number_of_Rows + Number_of_Cols - 1 - column) = !((bool)p_WD->data[column]);

@@ -21,27 +21,27 @@
 //#define WDS_chunk_bits 3 
 //#define RSri_bits 2 // bits used to determine how many rows will be selected by RSri
 
-#define Number_of_ADCs 16  // just as a redundant information. If CS has more 1 than number of ADCs, it generates an error regarding wrong nano-instruction
-#define ADC_resolution 128 // levels
+#define Number_of_ADCs 8  // just as a redundant information. If CS has more 1 than number of ADCs, it generates an error regarding wrong nano-instruction
+#define ADC_resolution 256 // levels
 //#define ADC_index_bits log2(Number_of_Cols/Number_of_ADCs)
 #define memristor_level 2
-#define maximum_datatype_size 16
+#define maximum_datatype_size 32
 #define RD_buffer_width maximum_datatype_size
-#define datatype_size 16
+#define datatype_size 32
 //***************************************************************************************************************
 
 #define mode_def  0    // 1 means using counter inside controller	
 
 // ************* All the values in nano second ****************************************
 
-#define simulation_time 948000
-#define clock_period  1 //nano second
+#define simulation_time 10000000
+#define clock_period  2//nano second
 
-#define write_fault_probability 10 // 1 = 0.01%, so 100 = 1%
-const float cell_resistance[memristor_level] = { 5,10 }; // cell_resistance = {LRS,HRS} - unit should be "k"
-const float read_voltage[1] = { 0.9 };
-const float write_voltage[1] = { 1.5 };
-const float write_current[1] = { 0.2 }; // unit is mA
+#define write_fault_probability 0 // 1 = 0.01%, so 100 = 1%
+const float cell_resistance[memristor_level] = { 0.005,1 }; // cell_resistance = {LRS,HRS} - unit should be "M"
+const float read_voltage[1] = { 0.2 };
+const float write_voltage[1] = { 2 };
+const float write_current[1] = { 100 }; // unit is uA
 
 
 #define fetch_and_decoding_delay_cycle  1
@@ -52,7 +52,7 @@ const float write_current[1] = { 0.2 }; // unit is mA
 //#define CS_filling_cycle 1
 //#define buffer_filling_cycle 1
 
-#define dim_crossbar_write_delay  60
+#define dim_crossbar_write_delay  100
 #define dim_crossbar_read_delay   10
 
 #define DIM_Crossbar_counter_write   	(dim_crossbar_write_delay/clock_period) + (dim_crossbar_write_delay%clock_period)  
@@ -60,23 +60,23 @@ const float write_current[1] = { 0.2 }; // unit is mA
 
 
 #define SH_delay_def  0.9 
-#define ADC_delay_def  2  // ADC delay + 8-bit Adder (in future we can seperate them)
+#define ADC_delay_def  1  // ADC delay + 8-bit Adder (in future we can seperate them)
 
 #define SH_counter_def  (SH_delay_def)/clock_period+1				
 #define ADC_counter_def	 (ADC_delay_def)/clock_period+1			
 
-#define latency_of_third_addition 2*clock_period
-#define latency_of_final_addition 2*clock_period
+#define latency_of_third_addition 5
+#define latency_of_final_addition 5
 
-#define write_DIM_power 1/256 // unit is "mw"
-#define read_DIM_power  1/256 // unit is "mw"
+#define write_DIM_power 1000/256 // unit is "uW"
+#define read_DIM_power  1000/256 // unit is "uW"
 
 //#define write_energy 40 // 40pj per cell
 //#define read_energy  0.4 // 0.4pj per cell
 
-#define ADC_energy   9 // 2pj per ADC
+#define ADC_energy   2 // pj per ADC
 #define SH_energy 0.001 // 1fj per sampling
-#define primary_adder_energy 1 // 1pj
-#define secondary_adder_energy 1 // 1pj
-#define third_adder_energy 2  // 2pj
-#define forth_adder_energy 4 // 4pj-addition between ADCs
+#define primary_adder_energy 0.01 // pj
+#define secondary_adder_energy 0.01 // pj
+#define third_adder_energy 0.25  // pj
+#define forth_adder_energy 4 // pj-addition between ADCs

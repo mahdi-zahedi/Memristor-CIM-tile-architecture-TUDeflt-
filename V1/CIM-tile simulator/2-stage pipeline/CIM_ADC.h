@@ -24,9 +24,10 @@ class CIM_ADC :public sc_module
 {
 private:
 	CS_if					R_column_select; // column select register 
+	sc_event				e_activation;
 public:
 
-	int						energy_consumption;
+	long double				energy_consumption; int temp2;
 	//---------------inputs----------------------------------
 	sc_in_clk				clock;
 	sc_port<SH_ADC_if>		p_In_data;
@@ -45,4 +46,5 @@ public:
 	void clock_pos();
 	void clock_neg();
 	void execution();
+	void activation();
 };

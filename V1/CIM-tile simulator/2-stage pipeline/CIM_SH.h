@@ -30,7 +30,7 @@ class CIM_SH :public sc_module
 		sc_port<crossbar_SH_if> In_data;
 		sc_in<bool> p_DoS;
 
-		int energy_consumption;
+		float energy_consumption;
 		//--------------outputs----------------------------------
 		sc_port<SH_ADC_if> ToADC;
 		sc_out<bool> p_done_SH;

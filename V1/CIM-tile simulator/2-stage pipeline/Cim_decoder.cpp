@@ -1,7 +1,7 @@
 #include "CIM_decoder.h"
 #include <math.h>
 
-CIM_decoder::CIM_decoder(sc_module_name nm, CIM_Write_Data* CIM_WD_obj, CIM_Row_Data* CIM_RD_obj, DIM_Crossbar* DIM_Crossbar_obj)  : sc_module(nm)
+CIM_decoder::CIM_decoder(sc_module_name nm, CIM_Write_Data* CIM_WD_obj, CIM_Row_Data* CIM_RD_obj, DIM_Crossbar* DIM_Crossbar_obj, CIM_ADC* CIM_ADC_obj)  : sc_module(nm)
 			, p_DoA("p_DoA")
 			, p_DoS("p_DoS")
 			, p_DoR("p_DoR")
@@ -31,7 +31,7 @@ CIM_decoder::CIM_decoder(sc_module_name nm, CIM_Write_Data* CIM_WD_obj, CIM_Row_
 			, CIM_WD_object(CIM_WD_obj)
 			, CIM_RD_object(CIM_RD_obj) 
 			, DIM_Crossbar_object(DIM_Crossbar_obj)
-			
+			, CIM_ADC_object(CIM_ADC_obj)
 			, p_inCtrl_2_outside_RD("p_inCtrl_2_outside_RD")
 			, p_inCtrl_2_outside_WD("p_inCtrl_2_outside_WD")
 			, p_RDS_in("p_RDS_in")
@@ -162,11 +162,7 @@ void CIM_decoder::stage1_decode()
 		PC1++;
 		cout << "PC1 = " << PC1 << endl;
 		istringstream iss1(line);
-		iss1 >> s1_string_opcode1;
-		//cout << "the decoded instruction is " << s1_string_opcode1 << " at " << sc_time_stamp() << endl;
-		//clock_neg();
-		//cout << "the decoded instruction is " << s1_string_opcode1 << " at " << sc_time_stamp() << endl;
-		//wait(SC_ZERO_TIME);
+		iss1 >> s1_string_opcode1;		
 		
 		
 		for (int i = 1; i <= fetch_and_decoding_delay_cycle; i++) // It's the number of cycles that decoding takes
@@ -276,8 +272,11 @@ void CIM_decoder::stage1_decode()
 				}
 				else if (RD_buffer_counter == RD_buffer_width) // if the outside controller is still busy with filling the buffer (means we cannot put new request)
 				{
-					if(!p_inCtrl_2_outside_RD->nb_can_put())
+					if (!p_inCtrl_2_outside_RD->nb_can_put())
+					{
+						e_wait_for_outside_RD.notify();
 						wait(e_done_outside_RD);
+					}
 				
 					RD_buffer_counter = 0;
 				}
@@ -491,8 +490,7 @@ void CIM_decoder::stage2_decode()
 		PC2++;
 		cout << "PC2 = " << PC2 << endl;
 		istringstream iss(line);
-		iss >> s2_string_opcode1;
-		wait(SC_ZERO_TIME);
+		iss >> s2_string_opcode1;		
 
 		for (int i = 1; i <= fetch_and_decoding_delay_cycle; i++) // It's the number of cycles that decoding takes
 			wait(event_clock_pos);
@@ -509,8 +507,7 @@ void CIM_decoder::stage2_decode()
 		{
 		case CSR:
 		{							
-			cout << "CSR is decoded at " << sc_time_stamp() << endl;	
-			//-------------------------------------------------------------------
+			
 			if (read_finished_flag == 1)
 			{
 				busy_flag_S2 = 0;
@@ -518,11 +515,16 @@ void CIM_decoder::stage2_decode()
 				wait(event_done_SH);
 			}
 			//-------------------------------------------------------------------
-			if (sc_done_ADC == 0)
+			if (sc_done_ADC == 0)		
 				wait(event_done_ADC);
+
 			sc_done_ADC = 0;
 			p_BNE_flag = 0;
 			//sc_done_CSR = 0;
+			//wait(SC_ZERO_TIME);
+			//-------------------------------------------------------------------
+			cout << "CSR is decoded at " << sc_time_stamp() << endl;
+			//-------------------------------------------------------------------
 			event_stage2_exe.notify();
 			iss >> CS_index;
 			iss >> CS_select_data;
@@ -544,29 +546,29 @@ void CIM_decoder::stage2_decode()
 			break;
 		}
 		case jr:
-		{
+		{	
+					
 			if (sc_done_ADC == 0)
+			{
 				wait(event_done_ADC);
-			//p_BNE_flag = 0;
+			}
 			cout << "Jr decoded at " << sc_time_stamp() << endl;
-			wait(event_clock_pos); // This clock was added to fill the PC with new address
-
-			s_DoR = false;
+			
+			wait(event_clock_pos); // This clock was added to fill the PC with new address						
 			s_adder_activation = 0;
 			s_logical_operation = 0;
 			s_write_verify = 0;
 			read_finished_flag = 1;
+			
 			if (jump_register_s2 == std::numeric_limits<int>::max())
 				break;
-			cout << "Jr already done at " << sc_time_stamp() << endl;
 
 			infile2.seekg(0, ios::beg);
 			for (int i = 0; i < jump_register_s2; i++) // skip jump_register lines so next getline gets line after jal
 				getline(infile2, line);
-
 			PC2 = jump_register_s2;
-			//jump_register_s2 = std::numeric_limits<int>::max();
 
+			cout << "Jr already done at " << sc_time_stamp() << endl;
 			break;
 		}
 		case BNE:
@@ -606,6 +608,7 @@ void CIM_decoder::stage2_decode()
 				wait(event_clock_pos);
 			p_LS = 1;			
 			
+			jump_register_s2 = std::numeric_limits<int>::max();
 			cout << "LS instruction decoded and finished at:\t" << sc_time_stamp() << endl;
 			break;
 		}
@@ -768,8 +771,8 @@ void CIM_decoder::stage1_exe()
 			CIM_RD_object->RDsh();
 			RD_buffer_counter++;
 			cout << "RDsh is done at ... " << sc_time_stamp() << endl;
-			if (RD_buffer_counter == RD_buffer_width) // check the RD buffer is empty or not 					
-				RD_buffer_counter = 0;
+			//if (RD_buffer_counter == RD_buffer_width) // check the RD buffer is empty or not 					
+				//RD_buffer_counter = 0;
 
 			if (RD_buffer_flipper == 0)
 				RD_buffer_flipper = 1;
@@ -924,8 +927,8 @@ void CIM_decoder::stage2_exe()
 				}
 			}
 			//-------------------------------------------------------------------
-			s_DoR = true;
-
+			CIM_ADC_object->activation();
+			temp2++;
 			if (first_CS == true)
 			{
 				first_CS = false;
@@ -938,6 +941,8 @@ void CIM_decoder::stage2_exe()
 				CSR_flipper = 0;
 
 			cout << "CSR is done at " << sc_time_stamp() << endl;
+			wait(SC_ZERO_TIME);
+			
 			break;
 		}
 		case AS:

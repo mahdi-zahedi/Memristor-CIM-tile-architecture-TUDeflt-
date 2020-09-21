@@ -21,6 +21,7 @@
 #include "CIM_Write_Data.h"
 #include "CIM_Row_Data.h"
 #include "DIM_Crossbar.h"
+#include "CIM_ADC.h"
 
 using namespace std;
 using tlm::tlm_nonblocking_put_if;
@@ -76,9 +77,10 @@ class CIM_decoder
 	public:
 		
 		//------------------- friend classes ----------------------------------------
-		CIM_Write_Data*							CIM_WD_object;
+		CIM_Write_Data*							CIM_WD_object; int temp2;
 		CIM_Row_Data*							CIM_RD_object;
 		DIM_Crossbar*							DIM_Crossbar_object;
+		CIM_ADC*								CIM_ADC_object;
 
 		//-------------------------input--------------------------------------------
 		//*****inputs which come from the top module to set the counter and mode****
@@ -130,7 +132,7 @@ class CIM_decoder
 		int				AS_flipper;
 		//---------------------------------------------------------------------------
 
-		CIM_decoder(sc_module_name nm, CIM_Write_Data* CIM_WD_obj, CIM_Row_Data* CIM_RD_obj, DIM_Crossbar* DIM_Crossbar_obj);
+		CIM_decoder(sc_module_name nm, CIM_Write_Data* CIM_WD_obj, CIM_Row_Data* CIM_RD_obj, DIM_Crossbar* DIM_Crossbar_obj, CIM_ADC* CIM_ADC_obj);
 		~CIM_decoder();
 		SC_HAS_PROCESS(CIM_decoder);
 

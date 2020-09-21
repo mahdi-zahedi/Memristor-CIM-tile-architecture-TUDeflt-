@@ -2,7 +2,7 @@
 
 Cim_Tile::Cim_Tile(sc_module_name nm)
 	: sc_module(nm)
-	, decoder_ins("decoder", &Write_Data_ins, &Row_Data_ins, &DIM_Crossbar_ins)
+	, decoder_ins("decoder", &Write_Data_ins, &Row_Data_ins, &DIM_Crossbar_ins, &ADC_ins)
 	, Outside_Controller_RD_ins("Outside_Controller_RD")
 	, Outside_Controller_WD_ins("Outside_Controller_WD", &Write_Data_ins)
 	, Write_Data_ins("Write_Data")

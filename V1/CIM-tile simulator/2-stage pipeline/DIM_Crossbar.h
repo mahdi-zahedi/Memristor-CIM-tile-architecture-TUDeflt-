@@ -41,7 +41,7 @@ class DIM_Crossbar : public sc_module
 		sc_port< WDS_out_if >		p_WDS; // data for WDS
 		sc_port< FS_if >			p_FS; 
 
-		int							energy_consumption;
+		long double					energy_consumption;
 		//-----------------outputs-------------------------------------
 		//-------------------------------------------------------------
 

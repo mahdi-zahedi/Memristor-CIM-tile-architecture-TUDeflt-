@@ -169,7 +169,11 @@ void CIM_ADDER::secondary_addition_scheme1()
 		{
 			if (cs_register.data[j] == '1') // primary_registers[0], associated to the first column of the crossbar, contains the MSB of the data
 			{
-				temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] = pow(2, (j % (Number_of_Cols / int(Number_of_temp_primary_registers)))) * primary_registers[j] + temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))];
+				if (datatype_size >= Number_of_Cols / Number_of_temp_primary_registers)
+					temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] = pow(2, (j % (Number_of_Cols / int(Number_of_temp_primary_registers)))) * primary_registers[j] + temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))];				
+				else 
+					temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] = pow(2, (j % datatype_size)) * primary_registers[j] + temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))];
+
 				energy_consumption = energy_consumption + secondary_adder_energy;
 				cout << "temp_primary_registers " << temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] << endl;
 			}
@@ -188,7 +192,11 @@ void CIM_ADDER::secondary_addition_scheme2()
 		{
 			if (cs_register.data[j] == '1')
 			{
-				temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] = pow(2,(j % (Number_of_Cols / int(Number_of_temp_primary_registers))))*ADDER_inputs.data[int(j / (Number_of_Cols / Number_of_temp_primary_registers))]+ temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))];
+				if(datatype_size >= Number_of_Cols / Number_of_temp_primary_registers)
+					temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] = pow(2,(j % (Number_of_Cols / int(Number_of_temp_primary_registers))))*ADDER_inputs.data[int(j / (Number_of_Cols / Number_of_temp_primary_registers))]+ temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))];
+				else 
+					temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] = pow(2, (j % datatype_size)) * ADDER_inputs.data[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] + temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))];
+
 				energy_consumption = energy_consumption + secondary_adder_energy;
 				cout << temp_primary_registers[int(j / (Number_of_Cols / Number_of_temp_primary_registers))] << " ";
 			}
@@ -215,7 +223,7 @@ void CIM_ADDER::third_addition()
 			for (int i = 0; i < Number_of_Cols; i++)
 				primary_registers[i] = 0;
 			LS = 0;
-
+			cout << "we are in IADD now at:\t" << sc_time_stamp() << endl;
 			//------------------------------------
 			for (int i = 0; i < latency_of_third_addition; i++)
 				clock_pos();
