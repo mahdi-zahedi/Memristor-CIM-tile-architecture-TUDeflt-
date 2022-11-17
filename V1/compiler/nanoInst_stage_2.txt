@@ -1,0 +1,12561 @@
+LS
+CSR	0000	1111111111111111
+CSR	0001	1111111111111111
+CSR	0010	1111111111111111
+CSR	0011	1111111111111111
+CSR	0100	1111111111111111
+CSR	0101	1111111111111111
+CSR	0110	1111111111111111
+CSR	0111	1111111111111111
+CSR	1000	1111111111111111
+CSR	1001	1111111111111111
+CSR	1010	1111111111111111
+CSR	1011	1111111111111111
+CSR	1100	1111111111111111
+CSR	1101	1111111111111111
+CSR	1110	1111111111111111
+CSR	1111	1111111111111111
+jr
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+LS
+jal	1
+IADD
+CP
+NOP
