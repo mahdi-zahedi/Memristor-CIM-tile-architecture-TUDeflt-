@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.isa": "cpp",
+        "iosfwd": "cpp",
+        "bitset": "cpp",
+        "iostream": "cpp"
+    }
+}
