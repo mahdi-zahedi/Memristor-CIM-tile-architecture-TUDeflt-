@@ -143,7 +143,7 @@ int main()
 		time_mux = 1;
 
 	//********** micro-instruction file ********************
-	ifstream infile("gemm.txt");
+	ifstream infile("instr_mem.txt");
 
 	//ifstream infile("D:/Studie/Thesis/Sim/sim_compiler_v3/benchmarks/medium/gemm.txt");
 	//ifstream infile("gemm_test.txt");
@@ -157,7 +157,7 @@ int main()
 	ofstream bufferfile;
 	ifstream jumpinfile;
 	ofstream jumpoutfile;
-	jumpoutfile.open("jumpFile.txt");
+	jumpoutfile.open("compiler-output/jumpFile.txt");
 	jumpoutfile.close();
 
 	ifstream readstageinfile;
@@ -165,18 +165,18 @@ int main()
 	//string nanoInst = "nanoInst_" + to_string(rs_bandwidth) + "_" + to_string(Max_row_select) + "_logic.txt";
 	//string nanoInst = "nanoInst_gemm_" + to_string(num_of_ADC) + "_" + to_string(Max_row_select) + ".txt";
 
-	nanofile.open("nanoInst.txt");
-	WDfile.open("WDfile.txt");
-	RDfile.open("RDfile.txt");
-	bufferfile_tmp.open("bufferfile_tmp.txt");
-	bufferfile.open("bufferfile.txt");
+	nanofile.open("compiler-output/nanoInst.txt");
+	WDfile.open("compiler-output/WDfile.txt");
+	RDfile.open("compiler-output/RDfile.txt");
+	bufferfile_tmp.open("compiler-output/bufferfile_tmp.txt");
+	bufferfile.open("compiler-output/bufferfile.txt");
 	//readstagefile.open("readStageFile.txt");
 	//nanofile.open(nanoInst);
 	//********** memory content file *********************
 	ofstream memfile1;
 	ofstream memfile2;
-	memfile1.open("dispMem1.txt");
-	memfile2.open("dispMem2.txt");
+	memfile1.open("compiler-output/dispMem1.txt");
+	memfile2.open("compiler-output/dispMem2.txt");
 	//******************************************************
 	Initialize();
 	string line;
@@ -494,7 +494,7 @@ int main()
 
 					readstageoutfile.close();
 					readstageinfile.open("readStageFile.txt");
-					jumpinfile.open("jumpFile.txt");
+					jumpinfile.open("compioler-output/jumpFile.txt");
 					readstage_jump = 1;
 					int test_counter = 0;
 
@@ -525,8 +525,8 @@ int main()
 						//readstageinfile.open("readStageFile.txt");
 						readstageinfile.clear();
 						readstageinfile.seekg(0, ios::beg);
-						remove("jumpFile.txt");
-						jumpoutfile.open("jumpFile.txt");
+						remove("compiler-output/jumpFile.txt");
+						jumpoutfile.open("compiler-output/jumpFile.txt");
 
 						jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
 
@@ -760,7 +760,7 @@ int main()
 
 				readstageoutfile.close();
 				readstageinfile.open("readStageFile.txt");
-				jumpinfile.open("jumpFile.txt");
+				jumpinfile.open("compiler-output/jumpFile.txt");
 				readstage_jump = 1;
 				int test_counter = 0;
 
@@ -791,8 +791,8 @@ int main()
 					//readstageinfile.open("readStageFile.txt");
 					readstageinfile.clear();
 					readstageinfile.seekg(0, ios::beg);
-					remove("jumpFile.txt");
-					jumpoutfile.open("jumpFile.txt");
+					remove("compiler-output/jumpFile.txt");
+					jumpoutfile.open("compiler-output/jumpFile.txt");
 
 					jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
 
@@ -1178,7 +1178,7 @@ int main()
 
 							readstageoutfile.close();
 							readstageinfile.open("readStageFile.txt");
-							jumpinfile.open("jumpFile.txt");
+							jumpinfile.open("compiler-output/jumpFile.txt");
 							readstage_jump = 1;
 							int test_counter = 0;
 
@@ -1209,8 +1209,8 @@ int main()
 								//readstageinfile.open("readStageFile.txt");
 								readstageinfile.clear();
 								readstageinfile.seekg(0, ios::beg);
-								remove("jumpFile.txt");
-								jumpoutfile.open("jumpFile.txt");
+								remove("compiler-output/jumpFile.txt");
+								jumpoutfile.open("compiler-output/jumpFile.txt");
 
 								jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
 
@@ -1588,7 +1588,7 @@ int main()
 
 			readstageoutfile.close();
 			readstageinfile.open("readStageFile.txt");
-			jumpinfile.open("jumpFile.txt");
+			jumpinfile.open("compiler-output/jumpFile.txt");
 			readstage_jump = 1;
 			int test_counter = 0;
 
@@ -1619,8 +1619,8 @@ int main()
 				//readstageinfile.open("readStageFile.txt");
 				readstageinfile.clear();
 				readstageinfile.seekg(0, ios::beg);
-				remove("jumpFile.txt");
-				jumpoutfile.open("jumpFile.txt");
+				remove("compiler-output/jumpFile.txt");
+				jumpoutfile.open("compiler-output/jumpFile.txt");
 
 				jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
 
@@ -1936,7 +1936,7 @@ int main()
 
 			readstageoutfile.close();
 			readstageinfile.open("readStageFile.txt");
-			jumpinfile.open("jumpFile.txt");
+			jumpinfile.open("compiler-output/jumpFile.txt");
 			readstage_jump = 1;
 			int test_counter = 0;
 
@@ -1967,8 +1967,8 @@ int main()
 				//readstageinfile.open("readStageFile.txt");
 				readstageinfile.clear();
 				readstageinfile.seekg(0, ios::beg);
-				remove("jumpFile.txt");
-				jumpoutfile.open("jumpFile.txt");
+				remove("compiler-output/jumpFile.txt");
+				jumpoutfile.open("compiler-output/jumpFile.txt");
 
 				jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
 
@@ -2283,7 +2283,7 @@ int main()
 
 			readstageoutfile.close();
 			readstageinfile.open("readStageFile.txt");
-			jumpinfile.open("jumpFile.txt");
+			jumpinfile.open("compiler-output/jumpFile.txt");
 			readstage_jump = 1;
 			int test_counter = 0;
 
@@ -2314,8 +2314,8 @@ int main()
 				//readstageinfile.open("readStageFile.txt");
 				readstageinfile.clear();
 				readstageinfile.seekg(0, ios::beg);
-				remove("jumpFile.txt");
-				jumpoutfile.open("jumpFile.txt");
+				remove("compiler-output/jumpFile.txt");
+				jumpoutfile.open("compiler-output/jumpFile.txt");
 
 				jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
 
@@ -2370,12 +2370,12 @@ int main()
 	{
 		cout << "Start splitting instructions" << endl;
 		ofstream nanofile_stage_1;
-		nanofile_stage_1.open("nanoInst_stage_1.txt");
+		nanofile_stage_1.open("compiler-output/nanoInst_stage_1.txt");
 
 		ofstream nanofile_stage_2;
-		nanofile_stage_2.open("nanoInst_stage_2.txt");
+		nanofile_stage_2.open("compiler-output/nanoInst_stage_2.txt");
 
-		ifstream nanofile("nanoInst.txt");
+		ifstream nanofile("compiler-output/nanoInst.txt");
 
 		string instruction_line, instruction_line_temp;
 		int stage_1_counter = 0, stage_2_counter = 0;

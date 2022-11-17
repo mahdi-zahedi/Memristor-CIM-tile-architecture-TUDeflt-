@@ -2,4 +2,7 @@
 **/*.vcd
 **/bin/
 **/*.out
-**/.txt
+**/*.txt
+**/compiler-output
+**/systemc-output
+**/*.exe

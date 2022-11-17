@@ -29,8 +29,8 @@ CIM_ADDER::CIM_ADDER(sc_module_name nm, CIM_Write_Data* CIM_WD_obj) : sc_module(
 	for (int i = 0; i < int(Number_of_Cols / datatype_size); i++)
 		final_temp[i] = 0;
 	//---------------------------------------------------------------------------
-	outputfile.open("outputfile_after_addition.txt");
-	logical_operation_file.open("logical_operation_file.txt");
+	outputfile.open("systemc-output/outputfile_after_addition.txt");
+	logical_operation_file.open("systemc-output/logical_operation_file.txt");
 	//---------------------------------------------------------------------------
 	LS = 0;
 	shift = 0;

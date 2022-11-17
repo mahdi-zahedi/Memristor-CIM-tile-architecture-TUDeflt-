@@ -18,7 +18,7 @@ int sc_main(int argc, char* argv[])
 {
 	ofstream memfile;
 	// Output file for displaying the crossbar
-	memfile.open("DispCrossbar_final.txt");
+	memfile.open("systemc-output/DispCrossbar_final.txt");
 	int Total_Energy=0;
 	Cim_Tile CIM_Tile_ins("Cim_Tile");
 	sc_clock my_clk("clock", clock_period, SC_NS, 0.5, 0, SC_NS, true);

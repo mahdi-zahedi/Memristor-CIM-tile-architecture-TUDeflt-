@@ -4,7 +4,7 @@ DIM_Crossbar::DIM_Crossbar(sc_module_name nm) : sc_module(nm)
 , p_done_crossbar(0), energy_consumption(0)
 {
 	// Initial values of the crossbar
-	memfile.open("DispCrossbar_init.txt");
+	memfile.open("systemc-output/DispCrossbar_init.txt");
 	intMem = new int[Number_of_Rows * Number_of_Cols];
 	intMem_init(intMem); // initialize the crossbar just for the first time.
 	dispMem(memfile);

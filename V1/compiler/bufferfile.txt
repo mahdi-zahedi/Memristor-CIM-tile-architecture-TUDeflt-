@@ -1,4 +1,0 @@
-WD_elements	2048
-RD_elements	65536
-matrix_rows	256
-RD_valid_bits_0	16

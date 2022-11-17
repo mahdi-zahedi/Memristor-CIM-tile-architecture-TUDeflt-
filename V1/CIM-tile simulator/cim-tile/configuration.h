@@ -3,10 +3,14 @@
 #include <cmath>
 
 
-#define nanoInst_stage_1 "../compiler/nanoInst_stage_1.txt"
-#define nanoInst_stage_2 "../compiler/nanoInst_stage_2.txt"
-#define RD_file_path "../compiler/RDfile.txt"
-#define WD_file_path "../compiler/WDfile.txt"
+// #define nanoInst_stage_1 "../compiler/nanoInst_stage_1.txt"
+// #define nanoInst_stage_2 "../compiler/nanoInst_stage_2.txt"
+// #define RD_file_path "../compiler/RDfile.txt"
+// #define WD_file_path "../compiler/WDfile.txt"
+#define nanoInst_stage_1 "compiler-output/nanoInst_stage_1.txt"
+#define nanoInst_stage_2 "compiler-output/nanoInst_stage_2.txt"
+#define RD_file_path "compiler-output/RDfile.txt"
+#define WD_file_path "compiler-output/WDfile.txt"
 
 //******************* playing with these number needs changing nan-instructions (compiler) as well **************
 #define Number_of_Rows 256

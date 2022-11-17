@@ -1,4 +1,4 @@
-# Memristor CIM tile architecture TUDelft
+# Memristor CIM tile architecture TU Delft
 
 ## Setup guide
 This guide assumes that you are using Linux Ubuntu/Pop!_OS
