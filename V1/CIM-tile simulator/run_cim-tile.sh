@@ -1,1 +1,0 @@
-./bin/cim_tile.exe > ./bin/output.txt
