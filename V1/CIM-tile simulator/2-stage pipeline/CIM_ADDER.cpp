@@ -264,7 +264,7 @@ void CIM_ADDER::coppy_per_ADC()
 		{
 			clock_pos();
 			//cout << "final_registers_per_ADC" << endl;
-			for (int j = 0; j < Number_of_temp_secondary_registers; j++)
+			for (int j = Number_of_temp_secondary_registers-1; j >= 0; j--)
 			{
 				final_registers_per_ADC[j] = temp_secondary_registers[j];
 				//cout << final_registers_per_ADC[j] << "\t";
@@ -329,7 +329,7 @@ void CIM_ADDER::coppy_between_ADC()
 		clock_pos();
 		if (p_CB == 1)
 		{
-			for (int j = 0; j < Number_of_Cols / datatype_size; j++)
+			for (int j = Number_of_Cols / datatype_size-1; j >=0 ; j--)
 			{
 				out->data[j] = final_temp[j];
 				outputfile << out->data[j] << "\t";
