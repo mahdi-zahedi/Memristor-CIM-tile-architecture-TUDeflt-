@@ -67,8 +67,8 @@ void CIM_Write_Data::WDSb()
 	clock_pos();
 	for (int i = 0; i < WDS_bandwidth; i++)
 	{
-		WDS_register[Number_of_Cols - WDS_bandwidth * (p_WDS_in->index + 1) + i] = (p_WDS_in->data[i]-'0');
-		p_WDS_out->data[Number_of_Cols - WDS_bandwidth * (p_WDS_in->index + 1) + i] = WDS_register[Number_of_Cols - WDS_bandwidth * (p_WDS_in->index + 1) + i];
+		WDS_register[WDS_bandwidth * (p_WDS_in->index) + i] = (p_WDS_in->data[WDS_bandwidth-i-1]-'0');
+		p_WDS_out->data[WDS_bandwidth * (p_WDS_in->index) + i] = WDS_register[WDS_bandwidth * (p_WDS_in->index) + i];
 	}
 }
 
