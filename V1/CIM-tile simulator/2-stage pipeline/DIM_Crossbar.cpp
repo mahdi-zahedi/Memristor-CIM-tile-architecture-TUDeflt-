@@ -45,6 +45,17 @@ void DIM_Crossbar::execution()
 		int row, column = 0;
 		
 		//------------------perform write operation on crossbar--------------------------------------------------
+		//cout << "p_WDS= ";
+		//for (int i = 0; i < Number_of_Cols; i++)
+			//cout << p_WDS->data[i];
+		//cout << endl;
+
+		//cout << "p_WD= ";
+		//for (int i = 0; i < Number_of_Cols; i++)
+			//cout << p_WD->data[i];
+		//cout << endl;
+
+
 		if (strcmp(p_FS->data, "WR") == 0)
 		{
 			for (row = 0; row < Number_of_Rows; row++) // Note: It is not possible to write to more than one rows at the same time

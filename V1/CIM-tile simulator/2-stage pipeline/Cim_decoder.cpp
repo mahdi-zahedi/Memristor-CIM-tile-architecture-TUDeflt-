@@ -270,16 +270,29 @@ void CIM_decoder::stage1_decode()
 					RD_buffer_counter = 0;
 					RDsh_first_iteration = 0;
 				}
-				else if (RD_buffer_counter == RD_buffer_width) // if the outside controller is still busy with filling the buffer (means we cannot put new request)
-				{
-					if (!p_inCtrl_2_outside_RD->nb_can_put())
+				else if (Number_of_Cols / (Number_of_ADCs * datatype_size) <= 1)  // here I am adding this codition to tell the outside contorel not send a new data in case there are more numbers per ADC 
+					if (RD_buffer_counter == RD_buffer_width ) // if the outside controller is still busy with filling the buffer (means we cannot put new request)
 					{
-						e_wait_for_outside_RD.notify();
-						wait(e_done_outside_RD);
+						if (!p_inCtrl_2_outside_RD->nb_can_put())
+						{
+							e_wait_for_outside_RD.notify();
+							wait(e_done_outside_RD);
+						}
+					
+						RD_buffer_counter = 0;
 					}
-				
-					RD_buffer_counter = 0;
-				}
+					else if (RD_buffer_counter == RD_buffer_width * Number_of_Cols / (Number_of_ADCs * datatype_size))
+					{
+						if (!p_inCtrl_2_outside_RD->nb_can_put())
+						{
+							e_wait_for_outside_RD.notify();
+							wait(e_done_outside_RD);
+						}
+
+						RD_buffer_counter = 0;
+
+					}
+					
 				
 				cout << "RDsh is decoded ... " << sc_time_stamp() << endl;
 				event_stage1_exe.notify();
@@ -491,7 +504,7 @@ void CIM_decoder::stage2_decode()
 		cout << "PC2 = " << PC2 << endl;
 		istringstream iss(line);
 		iss >> s2_string_opcode1;		
-
+		
 		for (int i = 1; i <= fetch_and_decoding_delay_cycle; i++) // It's the number of cycles that decoding takes
 			wait(event_clock_pos);
 		
@@ -642,7 +655,7 @@ void CIM_decoder::stage2_decode()
 				wait(event_clock_pos); // get IADD data ready
 
 			p_CP = 1;
-			p_AS_activation = 0;
+			//p_AS_activation = 0;
 			cout << "CP instruction finished at:\t" << sc_time_stamp() << endl;
 			break;
 		}
@@ -655,7 +668,7 @@ void CIM_decoder::stage2_decode()
 				wait(event_clock_pos); //stall the execution till one cycle before AS gets done 
 
 			cout << "AS in controller decode stage is done at " << sc_time_stamp() << endl;
-			p_AS_activation = 0;
+			//p_AS_activation = 0;
 			p_CB = 0;
 			
 			break;
@@ -953,6 +966,7 @@ void CIM_decoder::stage2_exe()
 			for (int i = 0; i < latency_of_final_addition; i++)
 				wait(event_clock_pos); //stall the execution till one cycle before AS gets done 
 
+			p_AS_activation = 0;
 			cout << "AS in controller exe_stage is done at " << sc_time_stamp() << endl;
 			if (AS_flipper == 0)
 				AS_flipper = 1;

@@ -37,10 +37,13 @@ void CIM_Row_Data::clock_neg()
 
 void CIM_Row_Data::RDsh()
 {
+	bool	temp[Number_of_Rows];
 	clock_pos();
 	for (int i = 0; i < Number_of_Rows; i++)
 	{
 		p_RD_out->data[i] = RD_buffer[i][0];
+		temp[i]= RD_buffer[i][0];
+
 	}
 	for (int i = 0; i < Number_of_Rows; i++)
 	{
@@ -48,6 +51,7 @@ void CIM_Row_Data::RDsh()
 		{
 			RD_buffer[i][j] = RD_buffer[i][j+1];
 		}
+		RD_buffer[i][RD_buffer_width] = temp[i];
 	}
 	
 }

@@ -124,7 +124,7 @@ void CIM_ADDER::registered_ADC_out()
 			for (int i = 0; i < Number_of_ADCs; i++)
 			{
 				ADDER_inputs.data[i] = In_data->data[i];
-				cout << "ADDER_inputs.data[i] = " << ADDER_inputs.data[i] << " at " << sc_time_stamp() << endl;
+				cout << "ADC register = " << ADDER_inputs.data[i] << " at " << sc_time_stamp() << endl;
 			}
 			
 			if (ADC_resolution >= (Number_of_Rows) * (memristor_level - 1))
@@ -305,17 +305,20 @@ void CIM_ADDER::Adder_select()
 			{
 				if (p_AS->data[i] == '1')
 				{
-					final_temp[int(i / (datatype_size / (Number_of_Cols / Number_of_ADCs)))] += final_registers_per_ADC[i] * pow(2, ((Number_of_Cols / Number_of_ADCs) * ((datatype_size / (Number_of_Cols / Number_of_ADCs)) - 1 - (i % (datatype_size / (Number_of_Cols / Number_of_ADCs))))));
+					//cout << "p_AS->data[i]" << i << "\t";
+					//cout << final_registers_per_ADC[Number_of_ADCs-1-i] << "t";
+					final_temp[int(i / (datatype_size / (Number_of_Cols / Number_of_ADCs)))] += final_registers_per_ADC[Number_of_ADCs - 1 - i] * pow(2, ((Number_of_Cols / Number_of_ADCs) * ((datatype_size / (Number_of_Cols / Number_of_ADCs)) - 1 - (i % (datatype_size / (Number_of_Cols / Number_of_ADCs))))));
 					energy_consumption = energy_consumption + forth_adder_energy;
 				}
 
 			}
 
+			//cout << endl;
 			//cout << "final_temp[i]" << "\t";
-			for (int i = 0; i < int(Number_of_final_registers); i++)
-			{
-				//cout << final_temp[i] << "\t";
-			}
+			//for (int i = 0; i < int(Number_of_final_registers); i++)
+			//{
+			//	cout << final_temp[i] << "\t";
+			//}
 			//cout << endl;
 
 		}
@@ -329,7 +332,7 @@ void CIM_ADDER::coppy_between_ADC()
 		clock_pos();
 		if (p_CB == 1)
 		{
-			for (int j = Number_of_Cols / datatype_size-1; j >=0 ; j--)
+			for (int j = 0; j < Number_of_Cols / datatype_size; j++)
 			{
 				out->data[j] = final_temp[j];
 				outputfile << out->data[j] << "\t";

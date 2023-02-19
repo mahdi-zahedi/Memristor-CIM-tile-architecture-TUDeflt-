@@ -21,20 +21,20 @@
 //#define WDS_chunk_bits 3 
 //#define RSri_bits 2 // bits used to determine how many rows will be selected by RSri
 
-#define Number_of_ADCs 8  // just as a redundant information. If CS has more 1 than number of ADCs, it generates an error regarding wrong nano-instruction
+#define Number_of_ADCs 32  // just as a redundant information. If CS has more 1 than number of ADCs, it generates an error regarding wrong nano-instruction
 #define ADC_resolution 256 // levels
 //#define ADC_index_bits log2(Number_of_Cols/Number_of_ADCs)
 #define memristor_level 2
-#define maximum_datatype_size 32
+#define maximum_datatype_size 8
 #define RD_buffer_width maximum_datatype_size
-#define datatype_size 32
+#define datatype_size 8
 //***************************************************************************************************************
 
 #define mode_def  0    // 1 means using counter inside controller	
 
 // ************* All the values in nano second ****************************************
 
-#define simulation_time 10000000
+#define simulation_time 100000
 #define clock_period  2//nano second
 
 #define write_fault_probability 0 // 1 = 0.01%, so 100 = 1%

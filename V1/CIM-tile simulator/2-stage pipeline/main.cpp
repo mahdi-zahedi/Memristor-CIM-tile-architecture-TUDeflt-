@@ -57,13 +57,13 @@ int sc_main(int argc, char* argv[])
 	CIM_Tile_ins.DIM_Crossbar_ins.dispMem(memfile);
 	Total_Energy = CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption + CIM_Tile_ins.ADC_ins.energy_consumption + CIM_Tile_ins.SH_ins.energy_consumption + CIM_Tile_ins.ADDER_ins.energy_consumption;
 	cout << "******************************************************************" << endl;
-	cout << "CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption " << CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption/1000000 << " nj" << endl;
+	cout << "CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption " << CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption/1000000 << " uj" << endl;
 	cout << "CIM_Tile_ins.ADC_ins.energy_consumption " << CIM_Tile_ins.ADC_ins.energy_consumption << " pj" << endl;
 	cout << "CIM_Tile_ins.ADC_ins.temp " << CIM_Tile_ins.ADC_ins.temp2 << endl;
 	cout << CIM_Tile_ins.decoder_ins.temp2 << endl;
 	cout << "CIM_Tile_ins.SH_ins.energy_consumption " << CIM_Tile_ins.SH_ins.energy_consumption/1000 << " nj" << endl;
 
-	cout << "Total energy= " << Total_Energy;
+	cout << "Total energy= " << Total_Energy << " pj";
 	sc_close_vcd_trace_file(Tf);
 
 	return 1;
