@@ -55,9 +55,9 @@ int sc_main(int argc, char* argv[])
 	
 	sc_start(simulation_time, SC_NS);
 	CIM_Tile_ins.DIM_Crossbar_ins.dispMem(memfile);
-	Total_Energy = CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption + CIM_Tile_ins.ADC_ins.energy_consumption + CIM_Tile_ins.SH_ins.energy_consumption + CIM_Tile_ins.ADDER_ins.energy_consumption;
+	Total_Energy = (CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption)/1000 + CIM_Tile_ins.ADC_ins.energy_consumption + CIM_Tile_ins.SH_ins.energy_consumption + CIM_Tile_ins.ADDER_ins.energy_consumption;
 	cout << "******************************************************************" << endl;
-	cout << "CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption " << CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption/1000000 << " uj" << endl;
+	cout << "CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption " << CIM_Tile_ins.DIM_Crossbar_ins.energy_consumption/1000000 << " nj" << endl;
 	cout << "CIM_Tile_ins.ADC_ins.energy_consumption " << CIM_Tile_ins.ADC_ins.energy_consumption << " pj" << endl;
 	cout << "CIM_Tile_ins.ADC_ins.temp " << CIM_Tile_ins.ADC_ins.temp2 << endl;
 	cout << CIM_Tile_ins.decoder_ins.temp2 << endl;
