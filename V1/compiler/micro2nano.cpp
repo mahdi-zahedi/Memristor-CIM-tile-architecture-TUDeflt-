@@ -8,129 +8,13 @@
  * Authored by Mahdi Zahedi (m.z.zahedi@tudelft.nl)
  ***************************************************************************/
 
- /****************************description******************************
- Changes in this subversion:
-
- - Added RSshift (RSsh) and Adder config (ACFG) instructions.
-
- - Changed re-ordering to be done on stages instead of operations
  
- - Added option to toggle of rowwise as its not implemented in hardware due to large decoders and routing.
-
- - Removed data from WD and RDS instructions, instead write the data to different files for outside controller.
-   WD now only provides the index for the demultiplexer, RDS also provides the RD mask bits
-
- - added flag to only change the RDS reg contents once during MMM.
-
- - Added option for combining CS and DoR into signle CSR instruction
-
- - Changed instruction names
-		RSc  -> RDSc
-		RSs  -> RDSs
-		RSbi -> RDSb
-		WD   -> WDb
-		WDS  -> WDSb
-
- - Removed END instruction (Not used by hardware)
-
- - Changed ENDC instruction for NOP (indicates end of program)
-
- - bugfixes regarding nano_line_counter
-
- - Added time multiplexing for smaller datatypes
-   (This does assume that the number of selected columns is an integer multiple of the datattype size! 
-    Which is only due to using the old version of micro-instructions (selecting columns instead of elements))
-
- - inverted index of WDb and WDSb due to hardware implementation (so the block '0' is the block on the far right of the crossbar)
-
- - Added creation of bufferfile which contains data required by the outside controller
-   For now, this only supports 1 MMM instruction from micro-format! It should be extended in the future when designing the outside controller
-
- TODO ------------------------------------------------------------------------
- - Add multiple read_stage files to allow for jumping to multiple different read stages for VMM operations (for time multiplexing)
-   The number of read_stage files is thus equal to cols_per_ADC/8 bit (assume 8 bit is smallest used for VMM)
-
- - make reordering support 3 or 4 stage pipelines (not necessary now as hardware doesnt support it, maybe for need it for sim?)
- - Add support for 'weird' datatypes for the RD buffer copies (it now assumes the rs_bandwidth is an integer multiple of the datatype size)
-
- clean up code? 
-	- remove the i+1, j+1 stuff that changes the row/column indices, they should always start from 0 for consistency!
-	  Check thoroughly for +1 and -1's throughout the entire code
-	- lots of repetition -> use functions
-	- logical operations can at least be collapsed into a single case statement
- ***************************************************************************/
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <map>
-#include <cstdlib>
-#include <ctime>
-#include <math.h>
-#include <vector>
-#include<algorithm>
-#include "inst2hdl.h"
-#include "data2hdl.h"
+#include "configuration.h"
 
 using namespace std;
 
-static enum s_opcode {
-	store,
-	read,
-	MMM,
-	logical_and,
-	logical_or,
-	logical_xor
-};
-
-static enum s_nano_opcode {
-	// -- stage 1 ---
-	ACFG,
-	FS,
-	RDSb,
-	RDSs,
-	RDSc,
-	RDsh,
-	WDSb,
-	WDSs,
-	WDSc,
-	WDb,
-	DoA,
-	DoS,
-	// --------------
-	// -- stage 2 ---
-	CS,
-	DoR,
-	CSR,
-	jal,
-	jr,
-	BNE,
-	AS,
-	CP,
-	CB,
-	LS,
-	IADD
-	// --------------
-};
-
 static map<std::string, s_opcode> opcode;
 static map<std::string, s_nano_opcode> nano_opcode;
-
-const int mem1_row_size = 2000; const int mem1_column_size = 2000;
-const int mem2_row_size = 2000; const int mem2_column_size = 2000;
-const int memristor_level = 2; const int num_of_crossbar = 1; const int crossbar_row = 256; const int crossbar_column = 256;
-const int num_of_ADC = 16; const char WDS_for_all_operations = 'n'; int Max_row_select = 128; const int datatype_size = 16; const int max_datatype_size = 16;
-const int rs_bandwidth = 32, wd_bandwidth = 32, wds_bandwidth = 32; const int no_of_rs_chunks = crossbar_row / rs_bandwidth; const int no_of_wds_chunks = crossbar_column / wds_bandwidth;
-const int num_pipeline_counters = 2; const char pipeline_rearrange = 'y'; const char write_verify = 'y';
-const bool allow_rowwise = 0; // 0 = dis-allow (row-wise is not supported in hardware)
-const bool combine_CS_DoR = 1; // 1 for CSR, 0 for separate CS and DoR
-const int time_mux_const = (crossbar_column / num_of_ADC) / datatype_size;
-const char toHDL = 'n';
-
-void Initialize(void);
-void intMem_init(int*);
-void dispMem(int*, ofstream&);
 
 int main()
 {
@@ -140,12 +24,7 @@ int main()
 	else
 		time_mux = 1;
 
-	//********** micro-instruction file ********************
-	ifstream infile("D:/Phd/simulators/sim_compiler_arch2/benchmarks/medium/gemm.txt");
-
-	//ifstream infile("D:/Studie/Thesis/Sim/sim_compiler_v3/benchmarks/medium/gemm.txt");
-	//ifstream infile("gemm_test.txt");
-	//ifstream infile("D:/Studie/Thesis/Sim/sim_compiler_v3/benchmarks/medium/gemm.txt");
+	
 	//********** nano-isntruction file *********************
 	ofstream nanofile;
 	ofstream WDfile;
@@ -160,16 +39,14 @@ int main()
 
 	ifstream readstageinfile;
 	ofstream readstageoutfile;
-	//string nanoInst = "nanoInst_" + to_string(rs_bandwidth) + "_" + to_string(Max_row_select) + "_logic.txt";
-	//string nanoInst = "nanoInst_gemm_" + to_string(num_of_ADC) + "_" + to_string(Max_row_select) + ".txt";
+	
 
 	nanofile.open("nanoInst.txt");
 	WDfile.open("WDfile.txt");
 	RDfile.open("RDfile.txt");
 	bufferfile_tmp.open("bufferfile_tmp.txt");
 	bufferfile.open("bufferfile.txt");
-	//readstagefile.open("readStageFile.txt");
-	//nanofile.open(nanoInst);
+	
 	//********** memory content file *********************
 	ofstream memfile1;
 	ofstream memfile2;
@@ -208,16 +85,12 @@ int main()
 
 	//******************************************************
 
-	// Addition unit configuration should be dependent on the microinstruction? 
-	// This version does not allow run-time datatype changes as the micro format should be changed first
-	// instead, thisa version justs starts the program with a single ACFG instruction to set up the addition unit.
 	int addition_config_val = (int)ceil((float)datatype_size / (float)8); 
 	string addition_config_bits;
 	for (int k = max((int)ceil(log2(addition_config_val)) - 1, 0); k >= 0; k--)
 	{
 		(addition_config_val - 1 >> k) & 1 ? addition_config_bits += '1' : addition_config_bits += '0';
 	}
-	//nanofile << "ACFG" << "\t" << addition_config_bits << endl; nano_line_counter++;
 
 	while (getline(infile, line))
 	{
@@ -1287,1044 +1160,335 @@ int main()
 		//********************************************************
 		//********************************************************
 
-		//"logical_and" -- "Add_D" -- "Add_S" -- "256 row bits" -- "p = start column" -- "q = no_of_columns"
-		case logical_and:
-		{
-			iss >> Add_D_string >> Add_S_string >> logic_row_string >> p >> q; // we do not use Add_D and Add_S at least in this version
-			p += 1;
-
-			nanofile << "FS" << "\t" << "AND" << endl; nano_line_counter++;
-			output_read_counter++;
-
-			// -- RS section --------------------------------------------------------------------------------------------------
-			int rows_to_write = 0, rsbi_to_write = 0, block_temp = -1, block_current = 0;
-			bool chunk_0_flags[no_of_rs_chunks] = { };
-			bool chunk_1_flags[no_of_rs_chunks] = { };
-
-			for (int i = 0; i < crossbar_row; i++) // determine how many rows/blocks should be written
-			{
-				block_current = i / rs_bandwidth;
-
-				if (logic_row_string[i] == '1')
-				{
-					rows_to_write++;
-					chunk_1_flags[block_current] = 1;
-					if (block_temp != block_current)
-					{
-						rsbi_to_write++;
-						block_temp = block_current;
-					}
-				}
-				else
-					chunk_0_flags[block_current] = 1;
-			}
-
-			int rsri_to_write = (int)ceil(((float)rows_to_write / ceil((float)rs_bandwidth / log2((float)crossbar_row)))); // number of rsri instructions
-
-			// Now if it can be done using a single rsri we do that, otherwise use block-wise
-			if (allow_rowwise && rsri_to_write == 1) // row-wise
-			{
-				int remaining_rows = rows_to_write, rows_this_instruction, string_index = 0;
-				
-				for (int i = 0; i < rsri_to_write; i++)
-				{
-					nanofile << "RSri" << "\t";
-
-					if (remaining_rows >= (int)ceil((float)rs_bandwidth / log2((float)crossbar_row)))
-					{
-						remaining_rows -= (int)ceil((float)rs_bandwidth / log2((float)crossbar_row));
-						rows_this_instruction = (int)ceil((float)rs_bandwidth / log2((float)crossbar_row));
-					}
-					else
-					{
-						rows_this_instruction = remaining_rows;
-					}
-
-					for (int k = (int)ceil(log2((float)rs_bandwidth / log2((float)crossbar_row))) - 1; k >= 0; k--)
-						((rows_this_instruction - 1) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-					nanofile << '\t';
-
-					for (int j = 0; j < rows_this_instruction; j++)
-					{
-						while (true)
-						{
-							if (logic_row_string[string_index] == '1')
-								break;
-
-							string_index++;
-						}
-						
-						for (int k = (int)ceil(log2(crossbar_row)) - 1; k >= 0; k--)
-							((string_index) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						string_index++;
-					}
-
-					for (int k = 0; k < rs_bandwidth - rows_this_instruction * (int)ceil(log2(crossbar_row)); k++)
-						nanofile << 0;
-
-					nanofile << endl; nano_line_counter++;
-
-				}
-			}
-			else // block-wise
-			{
-				int all_1_blocks = 0, all_0_blocks = 0, blocks_to_write = 0;
-				bool chunk_set = 0;
-				
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if (chunk_0_flags[i] == 1 && chunk_1_flags[i] == 0)
-						all_0_blocks++;
-					else if (chunk_0_flags[i] == 0 && chunk_1_flags[i] == 1)
-						all_1_blocks++;
-				}
-
-				if (all_1_blocks > all_0_blocks)
-					chunk_set = 1;
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if (chunk_set == 1 && chunk_0_flags[i] == 1)
-					{
-						blocks_to_write++;
-					}
-					else if (chunk_set == 0 && chunk_1_flags[i] == 1)
-					{
-						blocks_to_write++;
-					}
-
-				}
-
-				if (blocks_to_write < no_of_rs_chunks && chunk_set)
-				{
-					nanofile << "RDSs" << endl; nano_line_counter++;
-				}
-				else if (blocks_to_write < no_of_rs_chunks)
-				{
-					nanofile << "RDSc" << endl; nano_line_counter++;
-				}
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if ((all_1_blocks > all_0_blocks && chunk_0_flags[i] == 1) || (all_1_blocks <= all_0_blocks&& chunk_1_flags[i] == 1))
-					{
-						nanofile << "RDSb" << '\t';
-
-						for (int k = (int)ceil(log2((float)crossbar_row / (float)rs_bandwidth)) - 1; k >= 0; k--)
-							((i) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						nanofile << "\t";
-
-						for (int j = 0; j < rs_bandwidth; j++)
-						{
-							nanofile << logic_row_string[j + rs_bandwidth * i];
-						}
-
-						nanofile << endl; nano_line_counter++;
-					}
-				}
-			}
-				
-			// ----------------------------------------------------------------------------------------------------------------
-			if (WDS_for_all_operations == 'y')
-			{
-				// WDS start ------------------------------------------------------------------------------
-
-				WDS_temp.clear();
-
-				bool WDS_chunk_0_flags[no_of_wds_chunks] = { };
-				bool WDS_chunk_1_flags[no_of_wds_chunks] = { };
-				bool WDS_chunk_copy_flags[no_of_wds_chunks] = { };
-				int WDS_set_or_clear_counter = 0;
-				bool WDS_set_or_clear = false; // true = set, false = clear
-				int WDS_chunks_to_write_counter = 0;
-
-				for (int t = 0; t < no_of_wds_chunks; t++)
-				{
-					for (int k = 1; k <= wds_bandwidth; k++)
-					{
-						if (t * wds_bandwidth + k >= j && t * wds_bandwidth + k < j + q)
-						{
-							WDS_chunk_1_flags[t] = 1;
-
-						}
-						else
-						{
-							WDS_chunk_0_flags[t] = 1;
-						}
-					}
-
-					if (WDS_chunk_1_flags[t] && WDS_chunk_0_flags[t])
-						WDS_chunks_to_write_counter++;
-					else if (WDS_chunk_1_flags[t] && !WDS_chunk_0_flags[t])
-						WDS_set_or_clear_counter++;
-					else if (WDS_chunk_0_flags[t] && !WDS_chunk_1_flags[t])
-						WDS_set_or_clear_counter--;
-				}
-
-				// >0 means more blocks have all 1's so set. simillarly <0 means clear. ==0 means all blocks should be written so no set or clear
-				if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter > 0)
-				{
-					nanofile << "WDSs" << endl; nano_line_counter++;
-					WDS_set_or_clear = true;
-				}
-				else if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter <= 0)
-				{
-					nanofile << "WDSc" << endl; nano_line_counter++;
-					WDS_set_or_clear = false;
-				}
-
-				for (int WDS_chunk = 0; WDS_chunk < crossbar_column / wd_bandwidth; WDS_chunk++)
-				{
-					WDS_temp.clear();
-					if (WDS_chunks_to_write_counter == no_of_wds_chunks ||
-						(WDS_set_or_clear && WDS_chunk_0_flags[WDS_chunk]) ||
-						(!WDS_set_or_clear && WDS_chunk_1_flags[WDS_chunk])) // this chunk should be written
-					{
-						for (int t = 1; t <= wds_bandwidth; t++)
-						{
-							if (t + WDS_chunk * wds_bandwidth >= j && t + WDS_chunk * wds_bandwidth < j + q)
-							{
-								WDS_temp += '1';
-							}
-							else
-							{
-								WDS_temp += '0';
-							}
-						}
-
-						nanofile << "WDSb" << "\t";
-
-						for (int k = (int)ceil(log2((float)crossbar_column / (float)wds_bandwidth)) - 1; k >= 0; k--)
-							((crossbar_column / wd_bandwidth) - (WDS_chunk + 1) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						nanofile << "\t";
-
-						nanofile << WDS_temp << endl; nano_line_counter++;
-
-					}
-				}
-
-				// WDS end --------------------------------------------------------------------------------
-			}
-
-			/*if (FS_ref != "AND")
-			{
-				nanofile << "FS" << "\t" << "AND" << endl; nano_line_counter++;
-				FS_ref = "AND";
-			}*/
-
-			nanofile << "DoA" << endl; nano_line_counter++;
-			nanofile << "DoS" << endl; nano_line_counter++;
-
-			// This next section is used to write the read-out stage to the readStageFile. Afterwards it is compared with the jump file.
-			// if it matches we use jump, if it doesnt match we overwrite the jumpfile and append a jr
-			bool total_activation = 0;
-			int activation = 0;
-			string CS_activation_bits = "";
-			readstageoutfile.open("readStageFile.txt");
-			for (int CS = 0; CS < crossbar_column / num_of_ADC; CS++)
-			{
-
-				//-------------------- before issuing next CS, it has to be checked if we are done with columns or not ----------  
-				total_activation = 0;
-				CS_activation_bits.clear();
-				for (int ADC_cnt = 0; ADC_cnt < num_of_ADC; ADC_cnt++)
-				{
-					if ((crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC >= p && (crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC < p + q)
-					{
-						CS_activation_bits += '1';
-						total_activation = 1;
-					}
-					else
-					{
-						CS_activation_bits += '0';
-					}
-				}
-
-				//-----------------------------------------------------------------------------------------------
-
-				if (total_activation)
-				{
-					//nanofile << "CS" << '\t';
-					if (combine_CS_DoR)
-						readstageoutfile << "CSR" << '\t';
-					else
-						readstageoutfile << "CS" << '\t';
-
-					for (int k = (int)ceil(log2((float)crossbar_column / (float)num_of_ADC)) - 1; k >= 0; k--)
-					{
-						//(CS >> k) & 1 ? nanofile << 1 : nanofile << 0;
-						(CS >> k) & 1 ? readstageoutfile << 1 : readstageoutfile << 0;
-					}
-
-					//nanofile << '\t';
-					readstageoutfile << '\t';
-
-					//nanofile << CS_activation_bits << endl << "DoR" << endl;
-					if (combine_CS_DoR)
-						readstageoutfile << CS_activation_bits << endl;
-					else
-						readstageoutfile << CS_activation_bits << endl << "DoR" << endl;
-
-				}
-			}
-
-			readstageoutfile.close();
-			readstageinfile.open("readStageFile.txt");
-			jumpinfile.open("jumpFile.txt");
-			readstage_jump = 1;
-			int test_counter = 0;
-
-			while (true) // check if readfile and jumpfile are identical
-			{
-				getline(readstageinfile, readstageline);
-				getline(jumpinfile, jumpfileline);
-
-				if (readstageinfile.eof() || jumpinfile.eof())
-					break;
-
-				test_counter++;
-
-				if (readstageline != jumpfileline)
-				{
-					readstage_jump = 0;
-					break;
-				}
-			}
-
-			if (!readstageinfile.eof() || !jumpinfile.eof()) // dont jump if one file is longer than the other
-				readstage_jump = 0;
-
-			jumpinfile.close();
-
-			if (!readstage_jump)
-			{
-				//readstageinfile.open("readStageFile.txt");
-				readstageinfile.clear();
-				readstageinfile.seekg(0, ios::beg);
-				remove("jumpFile.txt");
-				jumpoutfile.open("jumpFile.txt");
-
-				jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
-
-				while (getline(readstageinfile, readstageline))
-				{
-					nanofile << readstageline << endl; nano_line_counter++;
-					jumpoutfile << readstageline << endl;
-				}
-				nanofile << "jr" << '\t' << jal_jump_to << '\t' << nano_line_counter + 1 - jal_jump_to << endl; nano_line_counter++; // jr instruction to return to value stored in register by jal
-				jumpoutfile.close();
-			}
-			else
-			{
-				nanofile << "jal" << '\t' << jal_jump_to << endl; nano_line_counter++;
-			}
-
-			readstageinfile.close();
-			remove("readStageFile.txt");
-
-			//nanofile << "END" << endl; nano_line_counter++;
-
-			break;
-		}
-
-		//********************************************************
-		//********************************************************
-
-		//"logical_or" -- "Add_D" -- "Add_S" -- "i" -- "j" -- "p" --  "q"
-		case logical_or:
-		{
-			iss >> Add_D_string >> Add_S_string >> logic_row_string >> p >> q; // we do not use Add_D and Add_S at least in this version
-			p += 1;
-
-			nanofile << "FS" << "\t" << "OR" << endl; nano_line_counter++;
-			output_read_counter++;
-
-			// -- RS section --------------------------------------------------------------------------------------------------
-			int rows_to_write = 0, rsbi_to_write = 0, block_temp = -1, block_current = 0;
-			bool chunk_0_flags[no_of_rs_chunks] = { };
-			bool chunk_1_flags[no_of_rs_chunks] = { };
-
-			for (int i = 0; i < crossbar_row; i++) // determine how many rows/blocks should be written
-			{
-				block_current = i / rs_bandwidth;
-
-				if (logic_row_string[i] == '1')
-				{
-					rows_to_write++;
-					chunk_1_flags[block_current] = 1;
-					if (block_temp != block_current)
-					{
-						rsbi_to_write++;
-						block_temp = block_current;
-					}
-				}
-				else
-					chunk_0_flags[block_current] = 1;
-			}
-
-			int rsri_to_write = (int)ceil(((float)rows_to_write / ceil((float)rs_bandwidth / log2((float)crossbar_row)))); // number of rsri instructions
-
-			// Now if it can be done using a single rsri we do that, otherwise use block-wise
-			if (allow_rowwise && rsri_to_write == 1) // row-wise
-			{
-				int remaining_rows = rows_to_write, rows_this_instruction, string_index = 0;
-
-				for (int i = 0; i < rsri_to_write; i++)
-				{
-					nanofile << "RSri" << "\t";
-
-					if (remaining_rows >= (int)ceil((float)rs_bandwidth / log2((float)crossbar_row)))
-					{
-						remaining_rows -= (int)ceil((float)rs_bandwidth / log2((float)crossbar_row));
-						rows_this_instruction = (int)ceil((float)rs_bandwidth / log2((float)crossbar_row));
-					}
-					else
-					{
-						rows_this_instruction = remaining_rows;
-					}
-
-					for (int k = (int)ceil(log2((float)rs_bandwidth / log2((float)crossbar_row))) - 1; k >= 0; k--)
-						((rows_this_instruction - 1) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-					nanofile << '\t';
-
-					for (int j = 0; j < rows_this_instruction; j++)
-					{
-						while (true)
-						{
-							if (logic_row_string[string_index] == '1')
-								break;
-
-							string_index++;
-						}
-
-						for (int k = (int)ceil(log2(crossbar_row)) - 1; k >= 0; k--)
-							((string_index) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						string_index++;
-					}
-
-					for (int k = 0; k < rs_bandwidth - rows_this_instruction * (int)ceil(log2(crossbar_row)); k++)
-						nanofile << 0;
-
-					nanofile << endl; nano_line_counter++;
-
-				}
-			}
-			else // block-wise
-			{
-				int all_1_blocks = 0, all_0_blocks = 0, blocks_to_write = 0;
-				bool chunk_set = 0;
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if (chunk_0_flags[i] == 1 && chunk_1_flags[i] == 0)
-						all_0_blocks++;
-					else if (chunk_0_flags[i] == 0 && chunk_1_flags[i] == 1)
-						all_1_blocks++;
-				}
-
-				if (all_1_blocks > all_0_blocks)
-					chunk_set = 1;
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if (chunk_set == 1 && chunk_0_flags[i] == 1)
-					{
-						blocks_to_write++;
-					}
-					else if (chunk_set == 0 && chunk_1_flags[i] == 1)
-					{
-						blocks_to_write++;
-					}
-
-				}
-
-				if (blocks_to_write < no_of_rs_chunks && chunk_set)
-				{
-					nanofile << "RDSs" << endl; nano_line_counter++;
-				}
-				else if (blocks_to_write < no_of_rs_chunks)
-				{
-					nanofile << "RDSc" << endl; nano_line_counter++;
-				}
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if ((all_1_blocks > all_0_blocks&& chunk_0_flags[i] == 1) || (all_1_blocks <= all_0_blocks && chunk_1_flags[i] == 1))
-					{
-						nanofile << "RDSb" << '\t';
-
-						for (int k = (int)ceil(log2((float)crossbar_row / (float)rs_bandwidth)) - 1; k >= 0; k--)
-							((i) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						nanofile << "\t";
-
-						for (int j = 0; j < rs_bandwidth; j++)
-						{
-							nanofile << logic_row_string[j + rs_bandwidth * i];
-						}
-
-						nanofile << endl; nano_line_counter++;
-					}
-				}
-			}
-
-			// ----------------------------------------------------------------------------------------------------------------
-
-			if (WDS_for_all_operations == 'y')
-			{
-				// WDS start ------------------------------------------------------------------------------
-
-				WDS_temp.clear();
-
-				bool WDS_chunk_0_flags[no_of_wds_chunks] = { };
-				bool WDS_chunk_1_flags[no_of_wds_chunks] = { };
-				bool WDS_chunk_copy_flags[no_of_wds_chunks] = { };
-				int WDS_set_or_clear_counter = 0;
-				bool WDS_set_or_clear = false; // true = set, false = clear
-				int WDS_chunks_to_write_counter = 0;
-
-				for (int t = 0; t < no_of_wds_chunks; t++)
-				{
-					for (int k = 1; k <= wds_bandwidth; k++)
-					{
-						if (t * wds_bandwidth + k >= j && t * wds_bandwidth + k < j + q)
-						{
-							WDS_chunk_1_flags[t] = 1;
-
-						}
-						else
-						{
-							WDS_chunk_0_flags[t] = 1;
-						}
-					}
-
-					if (WDS_chunk_1_flags[t] && WDS_chunk_0_flags[t])
-						WDS_chunks_to_write_counter++;
-					else if (WDS_chunk_1_flags[t] && !WDS_chunk_0_flags[t])
-						WDS_set_or_clear_counter++;
-					else if (WDS_chunk_0_flags[t] && !WDS_chunk_1_flags[t])
-						WDS_set_or_clear_counter--;
-				}
-
-				// >0 means more blocks have all 1's so set. simillarly <0 means clear. ==0 means all blocks should be written so no set or clear
-				if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter > 0)
-				{
-					nanofile << "WDSs" << endl; nano_line_counter++;
-					WDS_set_or_clear = true;
-				}
-				else if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter <= 0)
-				{
-					nanofile << "WDSc" << endl; nano_line_counter++;
-					WDS_set_or_clear = false;
-				}
-
-				for (int WDS_chunk = 0; WDS_chunk < crossbar_column / wd_bandwidth; WDS_chunk++)
-				{
-					WDS_temp.clear();
-					if (WDS_chunks_to_write_counter == no_of_wds_chunks ||
-						(WDS_set_or_clear && WDS_chunk_0_flags[WDS_chunk]) ||
-						(!WDS_set_or_clear && WDS_chunk_1_flags[WDS_chunk])) // this chunk should be written
-					{
-						for (int t = 1; t <= wds_bandwidth; t++)
-						{
-							if (t + WDS_chunk * wds_bandwidth >= j && t + WDS_chunk * wds_bandwidth < j + q)
-							{
-								WDS_temp += '1';
-							}
-							else
-							{
-								WDS_temp += '0';
-							}
-						}
-
-						nanofile << "WDSb" << "\t";
-
-						for (int k = (int)ceil(log2((float)crossbar_column / (float)wds_bandwidth)) - 1; k >= 0; k--)
-							((crossbar_column / wd_bandwidth) - (WDS_chunk + 1) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						nanofile << "\t";
-
-						nanofile << WDS_temp << endl; nano_line_counter++;
-
-					}
-				}
-
-				// WDS end --------------------------------------------------------------------------------
-			}
-
-			/*if (FS_ref != "OR")
-			{
-				nanofile << "FS" << "\t" << "OR" << endl; nano_line_counter++;
-				FS_ref = "OR";
-			}*/
-
-			nanofile << "DoA" << endl; nano_line_counter++;
-			nanofile << "DoS" << endl; nano_line_counter++;
-
-
-			// This next section is used to write the read-out stage to the readStageFile. Afterwards it is compared with the jump file.
-						// if it matches we use jump, if it doesnt match we overwrite the jumpfile and append a jr
-			bool total_activation = 0;
-			int activation = 0;
-			string CS_activation_bits = "";
-			readstageoutfile.open("readStageFile.txt");
-			for (int CS = 0; CS < crossbar_column / num_of_ADC; CS++)
-			{
-
-				//-------------------- before issuing next CS, it has to be checked if we are done with columns or not ----------  
-				total_activation = 0;
-				CS_activation_bits.clear();
-				for (int ADC_cnt = 0; ADC_cnt < num_of_ADC; ADC_cnt++)
-				{
-					if ((crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC >= p && (crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC < p + q)
-					{
-						CS_activation_bits += '1';
-						total_activation = 1;
-					}
-					else
-					{
-						CS_activation_bits += '0';
-					}
-				}
-
-				//-----------------------------------------------------------------------------------------------
-
-				if (total_activation)
-				{
-					//nanofile << "CS" << '\t';
-					if (combine_CS_DoR)
-						readstageoutfile << "CSR" << '\t';
-					else
-						readstageoutfile << "CS" << '\t';
-
-					for (int k = (int)ceil(log2((float)crossbar_column / (float)num_of_ADC)) - 1; k >= 0; k--)
-					{
-						//(CS >> k) & 1 ? nanofile << 1 : nanofile << 0;
-						(CS >> k) & 1 ? readstageoutfile << 1 : readstageoutfile << 0;
-					}
-
-					//nanofile << '\t';
-					readstageoutfile << '\t';
-
-					//nanofile << CS_activation_bits << endl << "DoR" << endl;
-					if (combine_CS_DoR)
-						readstageoutfile << CS_activation_bits << endl;
-					else
-						readstageoutfile << CS_activation_bits << endl << "DoR" << endl;
-
-				}
-			}
-
-			readstageoutfile.close();
-			readstageinfile.open("readStageFile.txt");
-			jumpinfile.open("jumpFile.txt");
-			readstage_jump = 1;
-			int test_counter = 0;
-
-			while (true) // check if readfile and jumpfile are identical
-			{
-				getline(readstageinfile, readstageline);
-				getline(jumpinfile, jumpfileline);
-
-				if (readstageinfile.eof() || jumpinfile.eof())
-					break;
-
-				test_counter++;
-
-				if (readstageline != jumpfileline)
-				{
-					readstage_jump = 0;
-					break;
-				}
-			}
-
-			if (!readstageinfile.eof() || !jumpinfile.eof()) // dont jump if one file is longer than the other
-				readstage_jump = 0;
-
-			jumpinfile.close();
-
-			if (!readstage_jump)
-			{
-				//readstageinfile.open("readStageFile.txt");
-				readstageinfile.clear();
-				readstageinfile.seekg(0, ios::beg);
-				remove("jumpFile.txt");
-				jumpoutfile.open("jumpFile.txt");
-
-				jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
-
-				while (getline(readstageinfile, readstageline))
-				{
-					nanofile << readstageline << endl; nano_line_counter++;
-					jumpoutfile << readstageline << endl;
-				}
-				nanofile << "jr" << '\t' << jal_jump_to << '\t' << nano_line_counter + 1 - jal_jump_to << endl; nano_line_counter++; // jr instruction to return to value stored in register by jal
-				jumpoutfile.close();
-			}
-			else
-			{
-				nanofile << "jal" << '\t' << jal_jump_to << endl; nano_line_counter++;
-			}
-
-			readstageinfile.close();
-			remove("readStageFile.txt");
-
-			//nanofile << "END" << endl; nano_line_counter++;
-			break;
-		}
-
-		//********************************************************
-		//********************************************************
-
-		//"logical_xor" -- "Add_D" -- "Add_S" -- "i" -- "j" -- "p" --  "q"
-		case logical_xor:
-		{
-			iss >> Add_D_string >> Add_S_string >> logic_row_string >> p >> q; // we do not use Add_D and Add_S at least in this version
-			p += 1;
-
-			nanofile << "FS" << "\t" << "XOR" << endl; nano_line_counter++;
-			output_read_counter++;
-
-			// -- RS section --------------------------------------------------------------------------------------------------
-			int rows_to_write = 0, rsbi_to_write = 0, block_temp = -1, block_current = 0;
-			bool chunk_0_flags[no_of_rs_chunks] = { };
-			bool chunk_1_flags[no_of_rs_chunks] = { };
-
-			for (int i = 0; i < crossbar_row; i++) // determine how many rows/blocks should be written
-			{
-				block_current = i / rs_bandwidth;
-
-				if (logic_row_string[i] == '1')
-				{
-					rows_to_write++;
-					chunk_1_flags[block_current] = 1;
-					if (block_temp != block_current)
-					{
-						rsbi_to_write++;
-						block_temp = block_current;
-					}
-				}
-				else
-					chunk_0_flags[block_current] = 1;
-			}
-
-			int rsri_to_write = (int)ceil(((float)rows_to_write / ceil((float)rs_bandwidth / log2((float)crossbar_row)))); // number of rsri instructions
-
-			// Now if it can be done using a single rsri we do that, otherwise use block-wise
-			if (allow_rowwise && rsri_to_write == 1) // row-wise
-			{
-				int remaining_rows = rows_to_write, rows_this_instruction, string_index = 0;
-
-				for (int i = 0; i < rsri_to_write; i++)
-				{
-					nanofile << "RSri" << "\t";
-
-					if (remaining_rows >= (int)ceil((float)rs_bandwidth / log2((float)crossbar_row)))
-					{
-						remaining_rows -= (int)ceil((float)rs_bandwidth / log2((float)crossbar_row));
-						rows_this_instruction = (int)ceil((float)rs_bandwidth / log2((float)crossbar_row));
-					}
-					else
-					{
-						rows_this_instruction = remaining_rows;
-					}
-
-					for (int k = (int)ceil(log2((float)rs_bandwidth / log2((float)crossbar_row))) - 1; k >= 0; k--)
-						((rows_this_instruction - 1) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-					nanofile << '\t';
-
-					for (int j = 0; j < rows_this_instruction; j++)
-					{
-						while (true)
-						{
-							if (logic_row_string[string_index] == '1')
-								break;
-
-							string_index++;
-						}
-
-						for (int k = (int)ceil(log2(crossbar_row)) - 1; k >= 0; k--)
-							((string_index) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						string_index++;
-					}
-
-					for (int k = 0; k < rs_bandwidth - rows_this_instruction * (int)ceil(log2(crossbar_row)); k++)
-						nanofile << 0;
-
-					nanofile << endl; nano_line_counter++;
-
-				}
-			}
-			else // block-wise
-			{
-				int all_1_blocks = 0, all_0_blocks = 0, blocks_to_write = 0;
-				bool chunk_set = 0;
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if (chunk_0_flags[i] == 1 && chunk_1_flags[i] == 0)
-						all_0_blocks++;
-					else if (chunk_0_flags[i] == 0 && chunk_1_flags[i] == 1)
-						all_1_blocks++;
-				}
-
-				if (all_1_blocks > all_0_blocks)
-					chunk_set = 1;
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if (chunk_set == 1 && chunk_0_flags[i] == 1)
-					{
-						blocks_to_write++;
-					}
-					else if (chunk_set == 0 && chunk_1_flags[i] == 1)
-					{
-						blocks_to_write++;
-					}
-
-				}
-
-				if (blocks_to_write < no_of_rs_chunks && chunk_set)
-				{
-					nanofile << "RDSs" << endl; nano_line_counter++;
-				}
-				else if (blocks_to_write < no_of_rs_chunks)
-				{
-					nanofile << "RDSc" << endl; nano_line_counter++;
-				}
-
-				for (int i = 0; i < no_of_rs_chunks; i++)
-				{
-					if ((all_1_blocks > all_0_blocks&& chunk_0_flags[i] == 1) || (all_1_blocks <= all_0_blocks && chunk_1_flags[i] == 1))
-					{
-						nanofile << "RDSb" << '\t';
-
-						for (int k = (int)ceil(log2((float)crossbar_row / (float)rs_bandwidth)) - 1; k >= 0; k--)
-							((i) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						nanofile << "\t";
-
-						for (int j = 0; j < rs_bandwidth; j++)
-						{
-							nanofile << logic_row_string[j + rs_bandwidth * i];
-						}
-
-						nanofile << endl; nano_line_counter++;
-					}
-				}
-			}
-
-			// ----------------------------------------------------------------------------------------------------------------
-
-			if (WDS_for_all_operations == 'y')
-			{
-				// WDS start ------------------------------------------------------------------------------
-
-				WDS_temp.clear();
-
-				bool WDS_chunk_0_flags[no_of_wds_chunks] = { };
-				bool WDS_chunk_1_flags[no_of_wds_chunks] = { };
-				bool WDS_chunk_copy_flags[no_of_wds_chunks] = { };
-				int WDS_set_or_clear_counter = 0;
-				bool WDS_set_or_clear = false; // true = set, false = clear
-				int WDS_chunks_to_write_counter = 0;
-
-				for (int t = 0; t < no_of_wds_chunks; t++)
-				{
-					for (int k = 1; k <= wds_bandwidth; k++)
-					{
-						if (t * wds_bandwidth + k >= j && t * wds_bandwidth + k < j + q)
-						{
-							WDS_chunk_1_flags[t] = 1;
-
-						}
-						else
-						{
-							WDS_chunk_0_flags[t] = 1;
-						}
-					}
-
-					if (WDS_chunk_1_flags[t] && WDS_chunk_0_flags[t])
-						WDS_chunks_to_write_counter++;
-					else if (WDS_chunk_1_flags[t] && !WDS_chunk_0_flags[t])
-						WDS_set_or_clear_counter++;
-					else if (WDS_chunk_0_flags[t] && !WDS_chunk_1_flags[t])
-						WDS_set_or_clear_counter--;
-				}
-
-				// >0 means more blocks have all 1's so set. simillarly <0 means clear. ==0 means all blocks should be written so no set or clear
-				if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter > 0)
-				{
-					nanofile << "WDSs" << endl; nano_line_counter++;
-					WDS_set_or_clear = true;
-				}
-				else if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter <= 0)
-				{
-					nanofile << "WDSc" << endl; nano_line_counter++;
-					WDS_set_or_clear = false;
-				}
-
-				for (int WDS_chunk = 0; WDS_chunk < crossbar_column / wd_bandwidth; WDS_chunk++)
-				{
-					WDS_temp.clear();
-					if (WDS_chunks_to_write_counter == no_of_wds_chunks ||
-						(WDS_set_or_clear && WDS_chunk_0_flags[WDS_chunk]) ||
-						(!WDS_set_or_clear && WDS_chunk_1_flags[WDS_chunk])) // this chunk should be written
-					{
-						for (int t = 1; t <= wds_bandwidth; t++)
-						{
-							if (t + WDS_chunk * wds_bandwidth >= j && t + WDS_chunk * wds_bandwidth < j + q)
-							{
-								WDS_temp += '1';
-							}
-							else
-							{
-								WDS_temp += '0';
-							}
-						}
-
-						nanofile << "WDSb" << "\t";
-
-						for (int k = (int)ceil(log2((float)crossbar_column / (float)wds_bandwidth)) - 1; k >= 0; k--)
-							((crossbar_column / wd_bandwidth) - (WDS_chunk + 1) >> k) & 1 ? nanofile << 1 : nanofile << 0;
-
-						nanofile << "\t";
-
-						nanofile << WDS_temp << endl; nano_line_counter++;
-
-					}
-				}
-
-				// WDS end --------------------------------------------------------------------------------
-			}
-
-			/*if (FS_ref != "XOR")
-			{
-				nanofile << "FS" << "\t" << "XOR" << endl; nano_line_counter++;
-				FS_ref = "XOR";
-			}*/
-
-			nanofile << "DoA" << endl; nano_line_counter++;
-			nanofile << "DoS" << endl; nano_line_counter++;
-
-
-			// This next section is used to write the read-out stage to the readStageFile. Afterwards it is compared with the jump file.
-						// if it matches we use jump, if it doesnt match we overwrite the jumpfile and append a jr
-			bool total_activation = 0;
-			int activation = 0;
-			string CS_activation_bits = "";
-			readstageoutfile.open("readStageFile.txt");
-			for (int CS = 0; CS < crossbar_column / num_of_ADC; CS++)
-			{
-
-				//-------------------- before issuing next CS, it has to be checked if we are done with columns or not ----------  
-				total_activation = 0;
-				CS_activation_bits.clear();
-				for (int ADC_cnt = 0; ADC_cnt < num_of_ADC; ADC_cnt++)
-				{
-					if ((crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC >= p && (crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC < p + q)
-					{
-						CS_activation_bits += '1';
-						total_activation = 1;
-					}
-					else
-					{
-						CS_activation_bits += '0';
-					}
-				}
-
-				//-----------------------------------------------------------------------------------------------
-
-				if (total_activation)
-				{
-					//nanofile << "CS" << '\t';
-					if (combine_CS_DoR)
-						readstageoutfile << "CSR" << '\t';
-					else
-						readstageoutfile << "CS" << '\t';
-
-					for (int k = (int)ceil(log2((float)crossbar_column / (float)num_of_ADC)) - 1; k >= 0; k--)
-					{
-						//(CS >> k) & 1 ? nanofile << 1 : nanofile << 0;
-						(CS >> k) & 1 ? readstageoutfile << 1 : readstageoutfile << 0;
-					}
-
-					//nanofile << '\t';
-					readstageoutfile << '\t';
-
-					//nanofile << CS_activation_bits << endl << "DoR" << endl;
-					if (combine_CS_DoR)
-						readstageoutfile << CS_activation_bits << endl;
-					else
-						readstageoutfile << CS_activation_bits << endl << "DoR" << endl;
-
-				}
-			}
-
-			readstageoutfile.close();
-			readstageinfile.open("readStageFile.txt");
-			jumpinfile.open("jumpFile.txt");
-			readstage_jump = 1;
-			int test_counter = 0;
-
-			while (true) // check if readfile and jumpfile are identical
-			{
-				getline(readstageinfile, readstageline);
-				getline(jumpinfile, jumpfileline);
-
-				if (readstageinfile.eof() || jumpinfile.eof())
-					break;
-
-				test_counter++;
-
-				if (readstageline != jumpfileline)
-				{
-					readstage_jump = 0;
-					break;
-				}
-			}
-
-			if (!readstageinfile.eof() || !jumpinfile.eof()) // dont jump if one file is longer than the other
-				readstage_jump = 0;
-
-			jumpinfile.close();
-
-			if (!readstage_jump)
-			{
-				//readstageinfile.open("readStageFile.txt");
-				readstageinfile.clear();
-				readstageinfile.seekg(0, ios::beg);
-				remove("jumpFile.txt");
-				jumpoutfile.open("jumpFile.txt");
-
-				jal_jump_to = nano_line_counter + 1; // point to line containing first CS (+1 because it is the next line to write here)
-
-				while (getline(readstageinfile, readstageline))
-				{
-					nanofile << readstageline << endl; nano_line_counter++;
-					jumpoutfile << readstageline << endl;
-				}
-				nanofile << "jr" << '\t' << jal_jump_to << '\t' << nano_line_counter + 1 - jal_jump_to << endl; nano_line_counter++; // jr instruction to return to value stored in register by jal
-				jumpoutfile.close();
-			}
-			else
-			{
-				nanofile << "jal" << '\t' << jal_jump_to << endl; nano_line_counter++;
-			}
-
-			readstageinfile.close();
-			remove("readStageFile.txt");
-
-			//nanofile << "END" << endl; nano_line_counter++;
-			break;
-		}
-		}
-	}
+	         //"logicaland" -- "Add_D" -- "Add_S" -- "256 row bits" -- "p = start column" -- "q = no_of_columns"
+             //"logicalor" -- "Add_D" -- "Add_S" -- "i" -- "j" -- "p" --  "q"
+             //"logicalxor" -- "Add_D" -- "Add_S" -- "i" -- "j" -- "p" --  "q"
+            case logical_and:
+            case logical_or:
+            case logical_xor: {
+                iss >> Add_D_string >> Add_S_string >> logic_row_string >> p
+                    >> q; // we do not use Add_D and Add_S at least in this version
+                p += 1;
+
+                switch (opcode[string_opcode]) {
+                    case logical_and:
+                        nanofile << "FS" << "\t" << "AND" << endl;
+                        nano_line_counter++;
+                        break;
+                    case logical_or:
+                        nanofile << "FS" << "\t" << "OR" << endl;
+                        nano_line_counter++;
+                        break;
+                    case logical_xor:
+                        nanofile << "FS" << "\t" << "XOR" << endl;
+                        nano_line_counter++;
+                        break;
+                }
+
+                output_read_counter++;
+
+                // -- RS section --------------------------------------------------------------------------------------------------
+                int rows_to_write = 0, rsbi_to_write = 0, block_temp = -1, block_current = 0;
+                bool chunk_0_flags[no_of_rs_chunks] = {};
+                bool chunk_1_flags[no_of_rs_chunks] = {};
+
+                for (int i = 0; i < crossbar_row; i++) // determine how many rows/blocks should be written
+                {
+                    block_current = i / rs_bandwidth;
+
+                    if (logic_row_string[i] == '1') {
+                        rows_to_write++;
+                        chunk_1_flags[block_current] = 1;
+                        if (block_temp != block_current) {
+                            rsbi_to_write++;
+                            block_temp = block_current;
+                        }
+                    } else
+                        chunk_0_flags[block_current] = 1;
+                }
+
+                int rsri_to_write = (int) ceil(((float) rows_to_write / ceil((float) rs_bandwidth /
+                                                                             log2((float) crossbar_row)))); // number of rsri instructions
+
+                // Now if it can be done using a single rsri we do that, otherwise use block-wise
+                if (allow_rowwise && rsri_to_write == 1) // row-wise
+                {
+                    int remaining_rows = rows_to_write, rows_this_instruction, string_index = 0;
+
+                    for (int i = 0; i < rsri_to_write; i++) {
+                        nanofile << "RSri" << "\t";
+
+                        if (remaining_rows >= (int) ceil((float) rs_bandwidth / log2((float) crossbar_row))) {
+                            remaining_rows -= (int) ceil((float) rs_bandwidth / log2((float) crossbar_row));
+                            rows_this_instruction = (int) ceil((float) rs_bandwidth / log2((float) crossbar_row));
+                        } else {
+                            rows_this_instruction = remaining_rows;
+                        }
+
+                        for (int k = (int) ceil(log2((float) rs_bandwidth / log2((float) crossbar_row))) - 1;
+                             k >= 0; k--)
+                            ((rows_this_instruction - 1) >> k) & 1 ? nanofile << 1 : nanofile << 0;
+                        nanofile << '\t';
+
+                        for (int j = 0; j < rows_this_instruction; j++) {
+                            while (true) {
+                                if (logic_row_string[string_index] == '1')
+                                    break;
+
+                                string_index++;
+                            }
+
+                            for (int k = (int) ceil(log2(crossbar_row)) - 1; k >= 0; k--)
+                                ((string_index) >> k) & 1 ? nanofile << 1 : nanofile << 0;
+
+                            string_index++;
+                        }
+
+                        for (int k = 0; k < rs_bandwidth - rows_this_instruction * (int) ceil(log2(crossbar_row)); k++)
+                            nanofile << 0;
+
+                        nanofile << endl;
+                        nano_line_counter++;
+
+                    }
+                } else // block-wise
+                {
+                    int all_1_blocks = 0, all_0_blocks = 0, blocks_to_write = 0;
+                    bool chunk_set = 0;
+
+                    for (int i = 0; i < no_of_rs_chunks; i++) {
+                        if (chunk_0_flags[i] == 1 && chunk_1_flags[i] == 0)
+                            all_0_blocks++;
+                        else if (chunk_0_flags[i] == 0 && chunk_1_flags[i] == 1)
+                            all_1_blocks++;
+                    }
+
+                    if (all_1_blocks > all_0_blocks)
+                        chunk_set = 1;
+
+                    for (int i = 0; i < no_of_rs_chunks; i++) {
+                        if (chunk_set == 1 && chunk_0_flags[i] == 1) {
+                            blocks_to_write++;
+                        } else if (chunk_set == 0 && chunk_1_flags[i] == 1) {
+                            blocks_to_write++;
+                        }
+
+                    }
+
+                    if (blocks_to_write < no_of_rs_chunks && chunk_set) {
+                        nanofile << "RDSs" << endl;
+                        nano_line_counter++;
+                    } else if (blocks_to_write < no_of_rs_chunks) {
+                        nanofile << "RDSc" << endl;
+                        nano_line_counter++;
+                    }
+
+                    for (int i = 0; i < no_of_rs_chunks; i++) {
+                        if ((all_1_blocks > all_0_blocks && chunk_0_flags[i] == 1) ||
+                            (all_1_blocks <= all_0_blocks && chunk_1_flags[i] == 1)) {
+                            nanofile << "RDSb" << '\t';
+
+                            for (int k = (int) ceil(log2((float) crossbar_row / (float) rs_bandwidth)) - 1; k >= 0; k--)
+                                ((i) >> k) & 1 ? nanofile << 1 : nanofile << 0;
+
+                            nanofile << "\t";
+
+                            for (int j = 0; j < rs_bandwidth; j++) {
+                                nanofile << logic_row_string[j + rs_bandwidth * i];
+                            }
+
+                            nanofile << endl;
+                            nano_line_counter++;
+                        }
+                    }
+                }
+
+                // ----------------------------------------------------------------------------------------------------------------
+                if (WDS_for_all_operations == 'y') {
+                    // WDS start ------------------------------------------------------------------------------
+
+                    WDS_temp.clear();
+
+                    bool WDS_chunk_0_flags[no_of_wds_chunks] = {};
+                    bool WDS_chunk_1_flags[no_of_wds_chunks] = {};
+                    bool WDS_chunk_copy_flags[no_of_wds_chunks] = {};
+                    int WDS_set_or_clear_counter = 0;
+                    bool WDS_set_or_clear = false; // true = set, false = clear
+                    int WDS_chunks_to_write_counter = 0;
+
+                    for (int t = 0; t < no_of_wds_chunks; t++) {
+                        for (int k = 1; k <= wds_bandwidth; k++) {
+                            if (t * wds_bandwidth + k >= j && t * wds_bandwidth + k < j + q) {
+                                WDS_chunk_1_flags[t] = 1;
+
+                            } else {
+                                WDS_chunk_0_flags[t] = 1;
+                            }
+                        }
+
+                        if (WDS_chunk_1_flags[t] && WDS_chunk_0_flags[t])
+                            WDS_chunks_to_write_counter++;
+                        else if (WDS_chunk_1_flags[t] && !WDS_chunk_0_flags[t])
+                            WDS_set_or_clear_counter++;
+                        else if (WDS_chunk_0_flags[t] && !WDS_chunk_1_flags[t])
+                            WDS_set_or_clear_counter--;
+                    }
+
+                    // >0 means more blocks have all 1's so set. simillarly <0 means clear. ==0 means all blocks should be written so no set or clear
+                    if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter > 0) {
+                        nanofile << "WDSs" << endl;
+                        nano_line_counter++;
+                        WDS_set_or_clear = true;
+                    } else if (WDS_chunks_to_write_counter < no_of_wds_chunks && WDS_set_or_clear_counter <= 0) {
+                        nanofile << "WDSc" << endl;
+                        nano_line_counter++;
+                        WDS_set_or_clear = false;
+                    }
+
+                    for (int WDS_chunk = 0; WDS_chunk < crossbar_column / wd_bandwidth; WDS_chunk++) {
+                        WDS_temp.clear();
+                        if (WDS_chunks_to_write_counter == no_of_wds_chunks ||
+                            (WDS_set_or_clear && WDS_chunk_0_flags[WDS_chunk]) ||
+                            (!WDS_set_or_clear && WDS_chunk_1_flags[WDS_chunk])) // this chunk should be written
+                        {
+                            for (int t = 1; t <= wds_bandwidth; t++) {
+                                if (t + WDS_chunk * wds_bandwidth >= j && t + WDS_chunk * wds_bandwidth < j + q) {
+                                    WDS_temp += '1';
+                                } else {
+                                    WDS_temp += '0';
+                                }
+                            }
+
+                            nanofile << "WDSb" << "\t";
+
+                            for (int k = (int) ceil(log2((float) crossbar_column / (float) wds_bandwidth)) - 1;
+                                 k >= 0; k--)
+                                ((crossbar_column / wd_bandwidth) - (WDS_chunk + 1) >> k) & 1 ? nanofile << 1 : nanofile
+                                        << 0;
+
+                            nanofile << "\t";
+
+                            nanofile << WDS_temp << endl;
+                            nano_line_counter++;
+
+                        }
+                    }
+
+                    // WDS end --------------------------------------------------------------------------------
+                }
+                
+
+                nanofile << "DoA" << endl;
+                nano_line_counter++;
+                nanofile << "DoS" << endl;
+                nano_line_counter++;
+
+                // This next section is used to write the read-out stage to the readStageFile. Afterwards it is compared with the jump file.
+                // if it matches we use jump, if it doesnt match we overwrite the jumpfile and append a jr
+                bool total_activation = 0;
+                int activation = 0;
+                string CS_activation_bits = "";
+                readstageoutfile.open("readStageFile.txt");
+                for (int CS = 0; CS < crossbar_column / num_of_ADC; CS++) {
+
+                    //-------------------- before issuing next CS, it has to be checked if we are done with columns or not ----------
+                    total_activation = 0;
+                    CS_activation_bits.clear();
+                    for (int ADC_cnt = 0; ADC_cnt < num_of_ADC; ADC_cnt++) {
+                        if ((crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC >= p &&
+                            (crossbar_column / num_of_ADC - CS) + ADC_cnt * crossbar_column / num_of_ADC < p + q) {
+                            CS_activation_bits += '1';
+                            total_activation = 1;
+                        } else {
+                            CS_activation_bits += '0';
+                        }
+                    }
+
+                    //-----------------------------------------------------------------------------------------------
+
+                    if (total_activation) {
+                        //nanofile << "CS" << '\t';
+                        if (combine_CS_DoR)
+                            readstageoutfile << "CSR" << '\t';
+                        else
+                            readstageoutfile << "CS" << '\t';
+
+                        for (int k = (int) ceil(log2((float) crossbar_column / (float) num_of_ADC)) - 1; k >= 0; k--) {
+                            //(CS >> k) & 1 ? nanofile << 1 : nanofile << 0;
+                            (CS >> k) & 1 ? readstageoutfile << 1 : readstageoutfile << 0;
+                        }
+
+                        //nanofile << '\t';
+                        readstageoutfile << '\t';
+
+                        //nanofile << CS_activation_bits << endl << "DoR" << endl;
+                        if (combine_CS_DoR)
+                            readstageoutfile << CS_activation_bits << endl;
+                        else
+                            readstageoutfile << CS_activation_bits << endl << "DoR" << endl;
+
+                    }
+                }
+
+                readstageoutfile.close();
+                readstageinfile.open("readStageFile.txt");
+                jumpinfile.open("compiler-output/jumpFile.txt");
+                readstage_jump = 1;
+                int test_counter = 0;
+
+                while (true) // check if readfile and jumpfile are identical
+                {
+                    getline(readstageinfile, readstageline);
+                    getline(jumpinfile, jumpfileline);
+
+                    if (readstageinfile.eof() || jumpinfile.eof())
+                        break;
+
+                    test_counter++;
+
+                    if (readstageline != jumpfileline) {
+                        readstage_jump = 0;
+                        break;
+                    }
+                }
+
+                if (!readstageinfile.eof() || !jumpinfile.eof()) // dont jump if one file is longer than the other
+                    readstage_jump = 0;
+
+                jumpinfile.close();
+
+                if (!readstage_jump) {
+                    //readstageinfile.open("readStageFile.txt");
+                    readstageinfile.clear();
+                    readstageinfile.seekg(0, ios::beg);
+                    remove("compiler-output/jumpFile.txt");
+                    jumpoutfile.open("compiler-output/jumpFile.txt");
+
+                    jal_jump_to = nano_line_counter +
+                                  1; // point to line containing first CS (+1 because it is the next line to write here)
+
+                    while (getline(readstageinfile, readstageline)) {
+                        nanofile << readstageline << endl;
+                        nano_line_counter++;
+                        jumpoutfile << readstageline << endl;
+                    }
+                    nanofile << "jr" << '\t' << jal_jump_to << '\t' << nano_line_counter + 1 - jal_jump_to << endl;
+                    nano_line_counter++; // jr instruction to return to value stored in register by jal
+                    jumpoutfile.close();
+                } else {
+                    nanofile << "jal" << '\t' << jal_jump_to << endl;
+                    nano_line_counter++;
+                }
+
+                readstageinfile.close();
+                remove("readStageFile.txt");
+
+                //nanofile << "END" << endl; nano_line_counter++;
+                break;
+            }
+        }
+    }
+	
 	
 	bufferfile_tmp.close();
 	bufferfile_tmp_i.open("bufferfile_tmp.txt");
